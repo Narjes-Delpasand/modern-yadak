@@ -1,0 +1,388 @@
+:root {
+  --navy: #0f1b3d;
+  --blue: #2563eb;
+  --blue-light: #e8f0fe;
+  --gray: #6b7280;
+  --gray-light: #f4f4f6;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Vazirmatn", Tahoma, sans-serif;
+  background-color: var(--gray-light);
+  color: var(--navy);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* هدر */
+.site-header {
+  background-color: var(--navy);
+  padding: 16px 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.main-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.main-nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.main-nav a:hover {
+  color: var(--blue-light);
+}
+
+.cart-link {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  background-color: var(--blue);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+/* هیرو */
+.hero {
+  background: linear-gradient(135deg, var(--navy), #1b2a5e);
+  text-align: center;
+  padding: 100px 0 90px;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.hero p {
+  color: #c7d0e8;
+  font-size: 1.15rem;
+  margin-bottom: 32px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: var(--blue);
+  color: var(--white);
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.trust-badges {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.trust-badges span {
+  color: #c7d0e8;
+  font-size: 0.9rem;
+}
+
+/* صفحات داخلی - بنر بالا */
+.page-header {
+  background: linear-gradient(135deg, var(--navy), #1b2a5e);
+  padding: 50px 0;
+  text-align: center;
+}
+
+.page-header h1 {
+  color: var(--white);
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.page-header p {
+  color: #c7d0e8;
+  font-size: 1rem;
+}
+
+/* محصولات پرفروش / صفحه محصولات */
+.featured,
+.products-page {
+  padding: 60px 0;
+}
+
+.featured h2 {
+  text-align: center;
+  font-size: 1.7rem;
+  color: var(--navy);
+  margin-bottom: 36px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.product-card {
+  background: var(--white);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(15, 27, 61, 0.08);
+}
+
+.product-img {
+  background: var(--gray-light);
+  border-radius: 10px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  font-size: 1.05rem;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.product-desc {
+  color: var(--gray);
+  font-size: 0.9rem;
+  margin-bottom: 18px;
+}
+
+.product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price {
+  font-weight: 700;
+  color: var(--navy);
+  font-size: 0.95rem;
+}
+
+.btn-small {
+  background: var(--blue);
+  color: var(--white);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-small:hover {
+  opacity: 0.9;
+}
+
+/* سبد خرید */
+.cart-page {
+  padding: 60px 0;
+}
+
+.cart-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: var(--white);
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+}
+
+.cart-row-name {
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.cart-row-price {
+  color: var(--gray);
+}
+
+.cart-remove {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.cart-remove:hover {
+  background: #fecaca;
+}
+
+.cart-empty {
+  text-align: center;
+  color: var(--gray);
+  padding: 40px 0;
+}
+
+.cart-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.cart-summary strong {
+  color: var(--navy);
+  font-size: 1.1rem;
+}
+
+/* درباره ما */
+.about-section {
+  padding: 60px 0;
+}
+
+.about-section p {
+  color: var(--gray);
+  max-width: 700px;
+  margin: 0 auto 20px;
+  line-height: 2;
+}
+
+.about-points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.about-point {
+  background: var(--white);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+}
+
+.about-point h3 {
+  color: var(--navy);
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+}
+
+.about-point p {
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+/* تماس با ما */
+.contact-section {
+  padding: 60px 0;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.contact-card {
+  background: var(--white);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+}
+
+.contact-card h3 {
+  color: var(--navy);
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+}
+
+.contact-card p {
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+.contact-form {
+  background: var(--white);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+/* فوتر */
+.site-footer {
+  background: var(--navy);
+  color: #9aa5c7;
+  text-align: center;
+  padding: 24px 0;
+  font-size: 0.85rem;
+  margin-top: 40px;
+}
